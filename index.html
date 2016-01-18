@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css"></head>
+<body>
+    
+    
+    
+    
+    
+
+    <p>Object Literal</p>
+
+    <p id="demo">
+
+        <script>
+        
+            var person = {
+                firstName:"John", 
+                lastName:"Doe", 
+                age:50, 
+                eyeColor:"blue"
+            };
+            
+            document.getElementById("demo").innerHTML =
+            person.firstName + " is " + person.age + " years old.";
+        
+        </script>
+    
+    </p>
+    
+    
+    <br><br><br>
+    
+    
+    <p>Constructor function, creating instances of objects</p>    
+    
+    <p id="demo2">
+        
+        <script>
+            
+            function Car(brand, wheels){
+                this.brand = brand;
+                this.wheels = wheels;
+            }
+            
+            var my_car = new Car("toyota", 4);
+            
+            document.getElementById("demo2").innerHTML =
+            my_car.brand + " has " + my_car.wheels + " wheels.";
+            
+            
+            
+        </script>
+    
+    </p>
+
+    
+    <br><br><br>
+    
+    
+    <p>Accessing object attributes and methods</p>    
+    
+    <p id="demo3">
+        
+        <script>
+            
+            var my_car = {
+                brand: "Prius",
+                "has-leather": false
+            };
+            
+            document.getElementById("demo3").innerHTML =
+            my_car.brand;
+            
+            
+        </script>
+    
+    </p>
+    
+    
+    <br><br><br>
+    
+    
+    <p>Prototypical objects</p>    
+    
+    <p id="demo4">
+        
+        <script>
+            
+            function Car(brand, wheels){
+                this.brand = brand;
+                this.wheels = wheels; 
+            }
+            my_car = new Car("toyota", 4);
+            
+            Car.prototype.friendly_brand = function(){
+                return "This car's brand is " + this.brand; 
+            }
+            
+            //Now you can use that method in all instances of the object
+            
+            document.getElementById("demo4").innerHTML =
+            my_car.friendly_brand();
+            
+            
+        </script>
+    
+    </p>
+    
+    
+    
+    
+</body>
+</html>
